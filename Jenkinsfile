@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install'
-                sh 'npx cypress run' 
+                bat 'npm install'
+                bat 'npx cypress run' 
             }
         }
     }
