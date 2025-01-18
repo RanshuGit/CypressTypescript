@@ -1,0 +1,22 @@
+{
+  "name": "cypresstypescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cy:stage": "npx cypress open --env configFile=stage",
+    "cy:dev": "npx cypress open --env configFile=dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.10.7",
+    "cypress": "^14.0.0",
+    "cypress-xpath": "^2.0.1",
+    "fs-extra": "^11.3.0"
+  },
+  "dependencies": {
+    "typescript": "^5.7.3"
+  }
+}

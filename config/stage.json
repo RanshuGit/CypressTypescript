@@ -1,0 +1,7 @@
+{
+    "baseUrl": "http://google.com/",
+    "USERNAME": "problem_user",
+    "PASSWORD": "secret_sauce",
+    "INVALID_USERNAME": "invalid_user",
+    "INVALID_PASSWORD": "invalid_pass"
+}
