@@ -1,5 +1,5 @@
 {
-    "baseUrl": "http://google.com/",
+    "baseUrl": "https://www.saucedemo.com/v1",
     "USERNAME": "problem_user",
     "PASSWORD": "secret_sauce",
     "INVALID_USERNAME": "invalid_user",
