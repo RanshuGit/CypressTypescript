@@ -5,7 +5,8 @@
   "scripts": {
     "cy:stage": "npx cypress open --env configFile=stage",
     "cy:dev": "npx cypress open --env configFile=dev",
-    "cy:test": "npx cypress run; npx allure serve ./reports/allure-results"
+    "cy:test": "npx cypress run; npx allure serve ./reports/allure-results",
+    "cypress:run": "cypress run" 
   },
   "author": "",
   "license": "ISC",
