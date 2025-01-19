@@ -11,5 +11,19 @@ pipeline {
                 bat 'npx cypress run' 
             }
         }
+        stage('Generate Allure Report') {
+            steps {
+                bat 'allure generate --clean'
+            }
+        }
+        stage('Publish Allure Report') {
+            steps {
+                allure([
+                    includeProperties: true,
+                    jdk: '',
+                    results: [[path: 'allure-results']]
+                ])
+            }
+        }
     }
 }
