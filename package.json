@@ -6,7 +6,8 @@
     "cy:stage": "npx cypress open --env configFile=stage",
     "cy:dev": "npx cypress open --env configFile=dev",
     "cy:test": "npx cypress run; npx allure serve ./reports/allure-results",
-    "cypress:run": "npx cypress run" 
+    "cypress:run": "npx cypress run",
+    "cypress:cloud": "npx cypress run --record --key 85f83a36-e3b5-4627-9b9d-8a8c1272fc94 --headed"
   },
   "author": "",
   "license": "ISC",
