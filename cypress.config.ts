@@ -1,7 +1,8 @@
 import { defineConfig } from 'cypress'
 import { allureCypress } from "allure-cypress/reporter";
 
-export default defineConfig({
+module.exports = defineConfig({
+  projectId: 'learn32',
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
