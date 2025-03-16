@@ -1,26 +1,26 @@
-resources:
-  repositories:
-    - repository: self
-      trigger: none
+trigger:
+- main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: 'learnAzure'
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '16.x'
-  displayName: 'Install Node.js'
+stages:
+- stage: Build
+  displayName: 'Azure Cypress Run'
+  jobs:
+  - job: Build
+    displayName: 'Install Node.js and Run Cypress'
+    pool:
+      name: 'learnAzure'  
+    demands:
+      - Agent.Name -equals az400learn
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '10.x'
+      displayName: 'Install Node.js'
 
-- script: npm install
-  displayName: 'Install dependencies'
-
-- script: npx cypress run
-  displayName: 'Run Cypress Tests'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: 'build/allure-results'
-    ArtifactName: 'allure-results'
-    publishLocation: 'Container'
-  displayName: 'Publish Allure Results'
+    - script: |
+        npm install
+        npx cypress run
+      displayName: 'Install dependencies and run Cypress tests'
